@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenBite</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Nav Bar (copy this exact block to all pages) ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="recipes.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workout.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 id="hero-quote">Eat well, live well!</h1>
+    </div>
+  </section>
+
+  <!-- ===== Health Tips of the Day ===== -->
+  <section id="dailyTip" class="tip-section">
+    <div class="tip-text">
+      <h2><strong>Health Tips of the Day</strong></h2>
+      <ul id="tipList"></ul>
+    </div>
+    <div class="tip-image">
+      <img src="images/7.jpg" alt="Healthy lifestyle" />
+    </div>
+  </section>
+
+  <!-- ===== Features (3 cards) ===== -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="images/25.jpg" alt="Healthy Recipes">
+      <p>Throughout this website you can get <strong>healthy recipes</strong>.</p>
+      <a href="recipes.html" class="btn">Click Here</a>
+    </div>
+    <div class="feature-box">
+      <img src="images/34.jpg" alt="Exercise Plan">
+      <p>Find a <strong>daily exercise plan</strong> to stay active and fit.</p>
+      <a href="workout.html" class="btn">Click Here</a>
+    </div>
+    <div class="feature-box">
+      <img src="images/43.jpg" alt="Calories and Nutrition">
+      <p>Use our <strong>calories and nutrition calculator</strong> to track your goals.</p>
+      <a href="calculator.html" class="btn">Click Here</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>GreenBite</h3>
+        <p>Healthy recipes, workouts, and tools to help you build better habits—one small step at a time.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="recipes.html">Healthy Recipes</a></li>
+          <li><a href="workout.html">Workouts</a></li>
+          <li><a href="calculator.html">Calorie Calculator</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Get one weekly email with tips & new updates.</p>
+        <form id="newsletterForm" class="newsletter" novalidate>
+          <label for="newsletterEmail" class="sr-only">Email address</label>
+          <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required autocomplete="email"/>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" class="newsletter-msg" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©️ <span id="yearNow"></span> GreenBite • Eat well, live well.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Recipes • GreenBite</title>
+
+  <!-- Site-wide CSS (navbar, base styles) -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Recipes page CSS -->
+  <link rel="stylesheet" href="recipes.css"/>
+</head>
+<body>
+
+  <!-- ===== Nav Bar ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="recipes.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workout.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Healthy Recipes</h1>
+    </div>
+  </section>
+
+  <!-- ===== Toolbar (Search + Filters) ===== -->
+  <section class="recipes-header">
+    <div class="recipes-toolbar">
+      <input
+        id="recipeSearch"
+        type="text"
+        placeholder="Search recipes (e.g. oats, pasta, soup)…"
+      />
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="breakfast">Breakfast</button>
+        <button class="chip" data-filter="lunch">Lunch</button>
+        <button class="chip" data-filter="dinner">Dinner</button>
+        <button class="chip" data-filter="snack">Snack</button>
+        <button class="chip" data-filter="vegan">Vegan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Recipe Cards Grid (JS fills this) ===== -->
+  <main class="rcards" id="recipeGrid"></main>
+
+  <!-- ===== Modal (Recipe Details) ===== -->
+  <div id="recipeModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" aria-label="Close" data-close="true">×</button>
+
+      <div class="modal-header">
+        <img id="modalImg" src="" alt="">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-chips">
+          <span id="modalCategory" class="tag"></span>
+          <span id="modalTime" class="time"></span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-col">
+          <h3>Ingredients</h3>
+          <ul id="modalIngredients"></ul>
+        </div>
+        <div class="modal-col">
+          <h3>Steps</h3>
+          <ol id="modalSteps"></ol>
+        </div>
+      </div>
+
+      <div class="modal-nutrition">
+        <h3>Nutrition (per serving)</h3>
+        <table class="nutri-table">
+          <tbody id="modalNutrition"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 GreenBite | Eat Healthy • Stay Fit</p>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script src="script.js"></script>   <!-- navbar toggle -->
+  <script src="recipes.js"></script>  <!-- recipes logic -->
+</body>
+</html>
