@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindfulness • GreenBite</title>
+
+  <!-- Global site CSS + global JS (hamburger lives in script.js) -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="mindfulness.css">
+</head>
+<body>
+
+  <!-- ===== Shared Nav (with hamburger) ===== -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">GreenBite</a>
+
+      <!-- ✅ Hamburger button -->
+      <button id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+
+      <!-- ✅ UL with id so script.js can toggle it -->
+      <ul id="mainNav" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Healthy Recipes</a></li>
+        <li><a href="calculator.html">Calorie Calculator</a></li>
+        <li><a href="workout.html">Workouts</a></li>
+        <li><a class="active" href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Page Banner ===== -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1>Mindfulness</h1>
+      <p>Slow down, breathe, and reset.</p>
+    </div>
+  </section>
+
+  <!-- ===== Main content ===== -->
+  <main class="mind-wrap">
+    <!-- Card: Guided Breathing -->
+    <section class="card">
+      <h2>Guided Breathing</h2>
+      <div class="breath-box">
+        <div id="breathCircle" class="breath-circle"></div>
+      </div>
+      <p id="breathPhase" class="phase">Ready?</p>
+      <div class="btns">
+        <button id="breathStart" class="btn">Start</button>
+        <button id="breathStop"  class="btn outline">Stop</button>
+      </div>
+      <p class="hint">Inhale 4s • Hold 4s • Exhale 4s</p>
+    </section>
+
+    <!-- Card: Session Timer -->
+    <section class="card">
+      <h2>Session Timer</h2>
+      <div class="timer-grid">
+        <div>
+          <label for="mins">Minutes</label>
+          <input id="mins" type="number" min="0" value="5">
+        </div>
+        <div>
+          <label for="secs">Seconds</label>
+          <input id="secs" type="number" min="0" value="0">
+        </div>
+      </div>
+      <div id="timerDisplay" class="timer-display">05:00</div>
+      <div class="btns">
+        <button id="timerStart" class="btn">Start</button>
+        <button id="timerPause" class="btn outline" disabled>Pause</button>
+        <button id="timerReset" class="btn outline">Reset</button>
+      </div>
+    </section>
+
+    <!-- Card: Sessions Completed -->
+    <section class="card">
+      <h2>Sessions Completed</h2>
+      <div class="count-box">
+        <div id="sessionCount" class="count">0</div>
+      </div>
+      <div class="btns">
+        <button id="clearCount" class="btn outline">Clear Count</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>©️ <span id="yearNow"></span> GreenBite • Eat well, live well.</p>
+    </div>
+  </footer>
+
+  <!-- Page JS (your mindfulness logic) -->
+  <script src="mindfulness.js"></script>
+</body>
+</html>
